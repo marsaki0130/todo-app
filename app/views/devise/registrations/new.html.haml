@@ -1,24 +1,24 @@
 .container
- %p.header_text Boards
+  %p.header_text Boards
   .border_line
   %h2 Sign up
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
     .field
-      = f.label :email
+      = f.label :email,class:'name'
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", class:'text'
     .field
-      = f.label :password
+      = f.label :password,class:'name'
       - if @minimum_password_length
         %em
           (#{@minimum_password_length} characters minimum)
       %br/
       = f.password_field :password, autocomplete: "new-password", class:'text'
     .field
-      = f.label :password_confirmation
+      = f.label :password_confirmation,class:'name'
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", class:'text'
     .actions
-      = f.submit "Sign up", class: 'submit_btn'
+      = f.submit "Submit", class: 'btn-primary'
   = render "devise/shared/links"
