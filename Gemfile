@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'hamlit'
 gem 'devise'
+gem 'faker'
 
 
 # Use Active Storage variant

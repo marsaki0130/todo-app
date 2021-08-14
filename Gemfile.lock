@@ -89,6 +89,8 @@ GEM
       html2haml
     erubi (1.10.0)
     erubis (2.7.0)
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.3)
     globalid (0.5.1)
       activesupport (>= 5.0)
@@ -239,6 +241,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   erb2haml
+  faker
   hamlit
   jbuilder (~> 2.7)
   listen (~> 3.3)
