@@ -1,0 +1,84 @@
+@import './variables';
+$heart-size: 16px;
+$avatar-size: 32px;
+
+.card {
+  background-color: $base-box-color;
+  border: 1px dashed rgba(0,0,0,0.2);  
+  margin: 16px auto;
+  cursor: pointer;
+  height: 350px;
+  width: 90%;
+  border-radius: 10px;
+
+  &_name{
+        font-size: 22px;
+        padding: 16px 16px;
+    }
+
+  &_detail {
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+    display: inline-block;
+
+    img {
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+  
+    }
+  }
+
+  &_description {
+    padding: 0px 16px;
+    opacity: 0.4;
+  }
+
+
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height:100%;
+      border-radius: 10px;
+    }
+
+    .dropbtn{
+      width:30px;
+      height: 30px;
+      left:50px;
+    }
+  }
+
+  
+
+
+
+
+.card_add{
+  position: relative;
+  background-color: white;
+  margin: 16px auto;
+  cursor: pointer;
+  height: 160px;
+  width: 90%;
+  border-radius: 10px;
+  border-style: dashed;
+
+  a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    display: block;
+  }
+}  
+

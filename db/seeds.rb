@@ -7,11 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Board.create({name:'初投稿だよ！', description:'すごく良い記事です。素晴らしい、なんでもできるね。俺'})
-Board.create({name:'わーい！', description:'浅田さががががhs'})
-
-# 5.times do
-#     Board.create{
-
-#     }
-# end
+10.times do
+    Board.create(
+        name: Faker::Lorem.sentence(word_count: 5),
+        description: Faker::Lorem.sentence(word_count: 100)
+    )
+end
