@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   def avatar_image
     'Oval.png'
-  end       
+  end
+  
+  has_many :boards, dependent: :destroy #ユーザーがいて記事が紐づいてることを認識させる
 end
