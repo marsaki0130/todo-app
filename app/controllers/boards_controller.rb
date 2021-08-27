@@ -16,7 +16,7 @@ class BoardsController < ApplicationController
    def create #new
      @board = current_user.boards.build(board_params)
      if @board.save
-       redirect_to root_path(@board)
+       redirect_to root_path(@board),notice:'保存しました'
      else
        render :new
      end
@@ -36,14 +36,14 @@ class BoardsController < ApplicationController
     end
   end
 
+  def destroy
+    board = Board.find(params[:id])
+    board.destroy! #ビックリマークは削除が失敗したときに挙動が止まる
+    redirect_to root_path, notice:'削除に成功しました'  #root_pathは記事一覧があるページ
+  end
+
   private
   def board_params
     params.require(:board).permit(:name, :description) #permit = 許可する
   end
-
-   def destroy
-     board = Board.find(params[:id])
-     board.destroy! #ビックリマークは削除が失敗したときに挙動が止まる
-     redirect_to root_path, notice:'削除に成功しました'  #root_pathは記事一覧があるページ
-   end
 end

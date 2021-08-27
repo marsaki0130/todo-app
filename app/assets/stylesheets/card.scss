@@ -32,7 +32,11 @@ $avatar-size: 32px;
   }
 
   &_description {
-    padding: 0px 16px;
+    padding: 24px 0 32px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     opacity: 0.4;
   }
 
