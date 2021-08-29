@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   resources :boards do #crud機能の作成
   end
+
+  resources :tasks do
+  end
 end
