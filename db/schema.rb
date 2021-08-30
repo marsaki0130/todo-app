@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2021_08_29_065810) do
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "name"
-    t.text "description"
+    t.bigint "user_id", null: false
+    t.string "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_boards_on_user_id"

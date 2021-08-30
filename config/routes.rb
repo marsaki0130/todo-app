@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'boards#index' #タスク一覧の表示
 
   resources :boards do #crud機能の作成
+    resources:tasks #中に入力すると boardsとtaskが紐づく
   end
 
   resources :tasks do
