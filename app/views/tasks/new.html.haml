@@ -2,7 +2,7 @@
   %p.header_text
   .border_line
   %h2 New Card
-  = form_with(model: @task,url: board_task_path(@board),local: true) do |f| 
+  = form_with(model: @task, url: tasks_path, method: 'post', local: true) do |f|
     %div
       = f.label :name, 'Name'
     %div

@@ -1,8 +1,7 @@
-.container
-  =form_with(model:@board, url:board_path, method:'get', local:true) do |f|
-    %div
-      =f.text_field :name, class: 'text'
-    %div
-      =f.text_area :description, class: 'text'
-    %div
-      =f.submit :Submit, class:'btn-primary'
+=form_with(model:@board, url:board_path, method:'get', local:true) do |f|
+  %div
+    =f.text_field :name, class: 'text'
+  %div
+    =f.text_area :description, class: 'text'
+  %div
+    =f.submit :Submit, class:'btn-primary'
