@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :tasks do
+    resources :comments, only:[:new, :create]
   end
 end

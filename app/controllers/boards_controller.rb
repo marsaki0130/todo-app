@@ -46,4 +46,8 @@ class BoardsController < ApplicationController
   def board_params
     params.require(:board).permit(:name, :description) #permit = 許可する
   end
+
+  def set_board   #以下を各実行前に処理
+    @board = Board.find(params[:id]) #paramsidでボードののId 記事のボードを取得@boardsに代入 @はビューに渡すため
+  end
 end
