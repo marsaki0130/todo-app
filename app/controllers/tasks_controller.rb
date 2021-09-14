@@ -1,5 +1,5 @@
 
-  
+
 class TasksController < ApplicationController
 
   def index
@@ -10,12 +10,10 @@ def new
   @task = current_user.tasks.build
 end
 
-
   def show
     @task = Task.find(params[:id])
     # @comments = @task.comments
   end
-
 
 def create
   @task = current_user.tasks.build(task_params)
@@ -27,7 +25,7 @@ def create
      end
 end
 
-def edit 
+def edit
 end
 
 def update
@@ -36,10 +34,9 @@ end
 def destroy
 end
 
-
 private
 def task_params
-    params.require(:task).permit(:title, :content)
+    params.require(:task).permit(:title, :content, :eyecatch)
 end
 
 end

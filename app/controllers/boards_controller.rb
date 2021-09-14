@@ -1,14 +1,14 @@
 class BoardsController < ApplicationController
   #  before_action :set_board, only: %i[show]
- 
+
    def index  #記事一覧を表示するときは[index]をつけるのがルール
      @boards = Board.all
    end
- 
+
    def show #特定の記事は[show]をつけるのがルール
-    @board = Board.find(params[:id])  
+    @board = Board.find(params[:id])
    end
- 
+
    def new
     @board = current_user.boards.build
    end
