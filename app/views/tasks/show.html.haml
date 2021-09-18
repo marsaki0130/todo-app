@@ -1,1 +1,19 @@
-<p>show</p>
+.container
+  .task-box
+    .task-top
+      .title 
+        = @task.title
+      - if user_signed_in? && current_user.tasks.exists?(id: @task.id)
+        .image
+          .dropdown
+            = image_tag 'actions.svg', class: 'dropbtn'
+            .dropdown-content
+              = link_to  '編集', edit_task_path(@task)
+              = link_to '削除', task_path(@task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか?' }
+    - if @task.eyecatch.attached?
+      = image_tag @task.eyecatch, class: 'eyecatch'
+    .content
+      .content-box
+        %p.content-left 
+      %p.content-writing
+        = @task.content
