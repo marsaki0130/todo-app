@@ -17,3 +17,17 @@
         %p.content-left 
       %p.content-writing
         = @task.content
+
+.comment
+  %h2 コメント一覧
+  - @comments.each do |comment|
+    .comment-box
+      .comment-box-img
+        = image_tag 'Oval(1).png', class: 'avater'
+      .comment-box-content
+        = comment.content
+
+.container
+  = link_to new_task_comment_path(@task) do
+    .btn-secondary
+      コメントを追加

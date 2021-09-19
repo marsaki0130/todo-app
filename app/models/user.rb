@@ -10,4 +10,5 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy #ユーザーがいて記事が紐づいてることを認識させる
   has_many :tasks, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end

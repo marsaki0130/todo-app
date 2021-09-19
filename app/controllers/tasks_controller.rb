@@ -12,7 +12,7 @@ end
 
   def show
     @task = Task.find(params[:id])
-    # @comments = @task.comments
+    @comments = @task.comments
   end
 
 def create
@@ -26,9 +26,17 @@ def create
 end
 
 def edit
+  @task = Task.find(params[:id]) #viewに渡すために@をつける
 end
 
 def update
+  @task = Task.find(params[:id])
+  if @task.update(task_params) #privateのtask_paramsを持ってくる
+    redirect_to task_path(@task), notice:'更新できました'
+  else
+    flash.now[:error] = '更新できませんでした'
+    render :edit
+  end
 end
 
 def destroy
