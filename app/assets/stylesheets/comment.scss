@@ -1,0 +1,23 @@
+.comment{
+    position: absolute;
+    top: calc(50% - 36px/2);
+    top:600px;
+    text-align: center;
+    height: 36px;
+    padding: 24px;
+    left: 0%;
+    right: 0%;
+  }
+  
+  .comment-box {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &-img {
+      width: 20%;
+    }
+    &-content {
+      width: 80%;
+    }
+}

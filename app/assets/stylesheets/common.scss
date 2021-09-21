@@ -5,9 +5,9 @@
   }
   
   .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
-    float: right;
+    right: 0px;
     margin-right: 15px;
     margin-top: 15px;
     display: flex;
@@ -39,9 +39,9 @@
   
  
 
-  .dropdown-content a:hover {
-    background-color: white;
-  }
+  // .dropdown-content a:hover {
+  //   background-color: white;
+  // }
   
   .dropdown:hover .dropdown-content {
     display: block;
