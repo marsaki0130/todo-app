@@ -1,0 +1,26 @@
+@import 'variables';
+
+.content {
+  background: #F4F4F4;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-bottom: 40px;
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    
+    // right: 60px;
+  }
+  &-left {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    // position: relative;
+    // right: 265px;
+  }
+  &-writing {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+}

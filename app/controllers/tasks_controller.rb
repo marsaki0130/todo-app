@@ -40,6 +40,9 @@ def update
 end
 
 def destroy
+  task = Task.find(params[:id])
+  task.destroy!
+  redirect_to root_path, notice:'削除できました'
 end
 
 private
